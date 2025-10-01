@@ -4,37 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>AC Horoscopes</title>
 </head>
+
+<!-- 	First State
+- The app has 2 unique states.
+- In the first state, we present a form to collect our user data.
+- That user data will be limited to the options we have available in a valid zodiac.
+- The first state has a title, a label on a selector input with our zodiac options, then finally a submit button.
+
+	Second State
+- This state is even simpler than the first.
+- We can break this down into an image and a paragraph.
+- The Image is presented above all of the text to confirm that we are talking about the according sign.
+- The paragraph needs some formatting but it’s just simple text returned to the user depending on their selection.
+ -->
 
 <body>
     <main>
         <h1>Zodiac Sign Form</h1>
         <form id="zodiacForm">
-            <label for="mySelect"></label>
+            <label for="mySelect">Choose your zodiac sign:</label>
             <select name="mySelect" id="mySelect">
-                <option value="Aries"></option>
-                <option value="Taurus"></option>
-                <option value="Gemini"></option>
-                <option value="Cancer"></option>
-                <option value="Leo"></option>
-                <option value="Virgo"></option>
-                <option value="Libra"></option>
-                <option value="Scorpio"></option>
-                <option value="Sagittarius"></option>
-                <option value="Capricorn"></option>
-                <option value="Aquarius"></option>
-                <option value="Pisces"></option>
+                <option value="" placeholder="Select your sign" disabled selected>Select your sign</option>
+                <option value="Aries">Aries</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Cancer">Cancer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Sagittarius">Sagittarius</option>
+                <option value="Capricorn">Capricorn</option>
+                <option value="Aquarius">Aquarius</option>
+                <option value="Pisces">Pisces</option>
             </select>
             <button type="submit">Submit</button>
         </form>
-        <div class="wrapper" id="wrapper" name="wrapper">
-            <img>
-            <p class="pOne hidden"></p>
-            <p class="pTwo hidden"></p>
-            <p class="pThree hidden"></p>
-        </div>
     </main>
 
 </body>

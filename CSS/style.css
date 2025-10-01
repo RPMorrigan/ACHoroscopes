@@ -1,0 +1,74 @@
+/* I’ll begin with talking about the global factors in both states of our app.
+
+- We have a simple sans-serif font applied to the entire document.
+- The text affected will be the Title(h1), the description(h2), and placeholder(selector), and finally the button.
+- The h1 and h2 will both have their default emphasis set.
+- The entire app seems to be wrapped in a div with minimum padding.
+- All divs have a border-radius applied to it. I will attempt to recreate this via our * selector.
+- Our wrapper has an outline and having confirmed this using ColorZilla, it has a soft drop shadow.
+- Everything is left justified.
+- The button is a solid color with white text. So pretty basic color options will be available.
+- We shouldn’t have any issues with this simple style sheet.
+
+Our second state
+- We have a simple image over the text. Left justified.
+- The image holds our corresponding symbol for the selected zodiac sign.
+- The text has some standard left justified formatting and that’s it.
+ */
+
+ :root {
+    --bgCol: white;
+    --borderCol: gainsboro;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --btnCol: #517AA1;
+ }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+        font-family: var(--font);
+    }
+
+ main {
+    display:flex;
+    flex-direction: column;
+    border: solid thin var(--borderCol);
+    width: minmax(min-content, 300px);
+    height: min-content;
+    padding: 1.5rem;
+    gap: 1rem;
+ }
+
+ form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+
+ }
+
+ label {
+    font-weight: bold;
+ }
+
+ select {
+    padding: 0.3rem;
+    border: solid thin var(--borderCol);
+    background: var(--bgCol);
+    width: 100%;
+ }
+
+ .wrapper {
+    color: var(--bgCol);
+ }
+
+ button {
+    background: var(--btnCol);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+ }
+
+ img {
+    display: none;
+ }
