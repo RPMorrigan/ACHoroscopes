@@ -23,10 +23,11 @@
 
 <body>
     <main>
+        <section class="form-section" id="form-zection" name="formSection">
         <h1>Zodiac Sign Form</h1>
         <form id="zodiacForm">
             <label for="mySelect">Choose your zodiac sign:</label>
-            <select name="mySelect" id="mySelect">
+            <select class="mood-select" id="mood-select" name="mood">
                 <option value="" placeholder="Select your sign" disabled selected>Select your sign</option>
                 <option value="Aries">Aries</option>
                 <option value="Taurus">Taurus</option>
@@ -43,8 +44,14 @@
             </select>
             <button type="submit">Submit</button>
         </form>
+        </section>
+<section class="result-section hidden" id="result-section" name="resultSection">
+    <img class="zodiac-image" id="zodiac-image" alt="Zodiac Image">
+    <p class="results" id="results"></p>
+    <p class="results0" id="results0"></p>
+    <p class="results-text" id="results-text"></p>
+</section>
     </main>
-
 </body>
 <script src="JS/script.js"></script>
 

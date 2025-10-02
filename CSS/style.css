@@ -29,13 +29,23 @@ Our second state
         font-family: var(--font);
     }
 
- main {
+    body {
+      align-content: center;
+      height: 100vh; 
+    }
+
+section {
+   border: solid thin red;
+}
+
+ .form-section {
     display:flex;
     flex-direction: column;
     border: solid thin var(--borderCol);
-    width: minmax(min-content, 300px);
+    width: fit-content;
     height: min-content;
-    padding: 1.5rem;
+    margin: auto;
+    padding: 1.5rem 2rem;
     gap: 1rem;
  }
 
@@ -70,5 +80,9 @@ Our second state
  }
 
  img {
-    display: none;
+    display: inherit;
+ }
+ 
+ .hidden {
+   display: none;
  }
