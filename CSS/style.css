@@ -18,8 +18,9 @@ Our second state
 
  :root {
     --bgCol: white;
-    --resultCol: lavender;
+    --resultCol: #F8F8F8;
     --borderCol: gainsboro;
+    --shadowCol: #F5F5F5;
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --btnCol: #517AA1;
  }
@@ -47,6 +48,7 @@ section {
     height: min-content;
     margin: auto;
     padding: 1.5rem 2rem;
+    box-shadow: 0 0 1rem var(--shadowCol);
     gap: 1rem;
  }
 
@@ -84,17 +86,24 @@ section {
     display: inherit;
  }
  
- .hidden {
-   display: none;
- }
-
  .result-section {
-   display: flex;
-   flex-direction: column;
-   background: var(--resultCol);
-   border: solid thin var(--borderCol);
-   width: fit-content;
-   height: min-content;
-   margin: 1rem auto;
-   padding: 1.5rem 2rem;
- }
+    display: flex;
+    flex-flow: column wrap;
+    background: var(--resultCol);
+    border: solid thin var(--borderCol);
+    min-width: min-content;
+    max-width: fit-content;
+    height: min-content;
+    margin: 1rem auto;
+    padding: 1.5rem 2rem;
+   }
+
+   p {
+      margin: 0.25rem;
+   }
+   .zodiac-image {
+      max-width: 5rem;
+   }
+   .hidden {
+     display: none;
+   }
