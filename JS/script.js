@@ -9,7 +9,7 @@ const horoscopeData = {
 					"Today is a day for bold actions. Trust your instincts and take the leap you've been considering.",
 				luckyNumbers: [3, 17, 21],
 				key: 0,
-				icon: "imgs/aries.png"
+				icon: "imgs/aries.svg"
 			},
 			{
 				sign: "Taurus",
@@ -18,7 +18,7 @@ const horoscopeData = {
 					"Patience will be your ally today. Good things come to those who wait, so don't rush into decisions.",
 				luckyNumbers: [5, 14, 29],
 				key: 1,
-				icon: "imgs/taurus.png"
+				icon: "imgs/taurus.svg"
 			},
 			{
 				sign: "Gemini",
@@ -27,7 +27,7 @@ const horoscopeData = {
 					"Communication is key today. Reach out to an old friend or a family member you haven't spoken to in a while.",
 				luckyNumbers: [2, 16, 23],
 				key: 2,
-				icon: "imgs/gemini.png"
+				icon: "imgs/gemini.svg"
 			},
 			{
 				sign: "Cancer",
@@ -36,7 +36,7 @@ const horoscopeData = {
 					"Embrace your creative side. Today is a perfect day for starting a new artistic project.",
 				luckyNumbers: [7, 19, 25],
 				key: 3,
-				icon: "imgs/cancer.png"
+				icon: "imgs/cancer.svg"
 			},
 			{
 				sign: "Leo",
@@ -45,7 +45,7 @@ const horoscopeData = {
 					"Your leadership skills will be in demand today. Take charge in a group situation and guide others to success.",
 				luckyNumbers: [1, 8, 22],
 				key: 4,
-				icon: "imgs/leo.png"
+				icon: "imgs/leo.svg"
 			},
 			{
 				sign: "Virgo",
@@ -54,7 +54,7 @@ const horoscopeData = {
 					"Pay attention to the small details today. Your meticulousness will lead to a significant breakthrough.",
 				luckyNumbers: [4, 11, 26],
 				key: 5,
-				icon: "imgs/virgo.png"
+				icon: "imgs/virgo.svg"
 			},
 			{
 				sign: "Libra",
@@ -63,7 +63,7 @@ const horoscopeData = {
 					"Seek balance in your life. Take time for yourself and focus on your personal well-being.",
 				luckyNumbers: [6, 15, 24],
 				key: 6,
-				icon: "imgs/libra.png"
+				icon: "imgs/libra.svg"
 			},
 			{
 				sign: "Scorpio",
@@ -72,7 +72,7 @@ const horoscopeData = {
 					"A mystery may unfold today. Trust your intuition and follow where it leads.",
 				luckyNumbers: [9, 18, 27],
 				key: 7,
-				icon: "imgs/scorpio.png"
+				icon: "imgs/scorpio.svg"
 			},
 			{
 				sign: "Sagittarius",
@@ -81,7 +81,7 @@ const horoscopeData = {
 					"Adventure calls to you. Embrace new experiences and open yourself to learning.",
 				luckyNumbers: [3, 12, 21],
 				key: 8,
-				icon: "img/sagittarius.png"
+				icon: "img/sagittarius.svg"
 			},
 			{
 				sign: "Capricorn",
@@ -90,7 +90,7 @@ const horoscopeData = {
 					"Discipline and hard work will be fruitful. Focus on your goals and you'll achieve great things.",
 				luckyNumbers: [8, 16, 23],
 				key: 9,
-				icon: "imgs/capricorn.png"
+				icon: "imgs/capricorn.svg"
 			},
 			{
 				sign: "Aquarius",
@@ -99,7 +99,7 @@ const horoscopeData = {
 					"Innovation is your theme today. Think outside the box and explore new ideas.",
 				luckyNumbers: [5, 13, 20],
 				key: 10,
-				icon: "imgs/aquarius.png"
+				icon: "imgs/aquarius.svg"
 			},
 			{
 				sign: "Pisces",
@@ -108,13 +108,13 @@ const horoscopeData = {
 					"Your empathy will be a blessing to someone in need. Listen and offer your support.",
 				luckyNumbers: [2, 10, 22],
 				key: 11,
-				icon: "imgs/pisces.png"
+				icon: "imgs/pisces.svg"
 			}
 		]
 	}
 };
 
-// variables
+// variables for DOM manipulation
 const myBody = document.querySelector("body");
 const form = document.getElementById("zodiacForm");
 const resultCard = document.getElementById("result-section")
@@ -123,7 +123,39 @@ const result = document.getElementById("results")
 const result0 = document.getElementById("results0")
 const resultTxt = document.getElementById("results-text");
 
-// template literal for the results section
+// This variable will be assigned the appropriate index number to update the path from which we fetch our data
+let signNum = 0;
+
+// Easy accces to the horoscope data into simple variables
+// This first line will take care of holding the path up to the final data object
+// This makes it easier to read and write the code
+let signPath = horoscopeData.horoscopes.astroSigns[signNum];
+// You can see that I need only to call 'usrSign' then the rest of the path
+let sign = signPath;
+let range = signPath.dateRange;
+let horoscope = signPath.dailyHoroscope;
+let icon = signPath.icon;
+
+// Template literal for the results section
 const resultLit = `Your zodiac sign is ${sign}`;
 const resultLit0 = `The date range for ${sign} is ${range}`;
 const resultLit1 = `Your horoscope today is ${horoscope}`;
+
+// Event listener for the form submission
+form.addEventListener("submit", usrData);
+
+// Fetches the form data. Re-assigns the value of 'signNum' then plugs it into our main data path
+function usrData(e) {
+	e.preventDefault();
+
+	const formData = new FormData(form);
+	const data = Object.fromEntries(formData.entries());
+
+	// Adds the dynamic conntent to it's appropriate container
+	zImg.setAttribute("src", icon);
+	result.textContent = resultLit;
+	result0.textContent = resultLit0;
+	resultTxt.textContent = resultLit1;
+
+	// resultCard.classList.toggle("hidden");
+}

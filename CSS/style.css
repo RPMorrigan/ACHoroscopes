@@ -18,6 +18,7 @@ Our second state
 
  :root {
     --bgCol: white;
+    --resultCol: lavender;
     --borderCol: gainsboro;
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --btnCol: #517AA1;
@@ -85,4 +86,15 @@ section {
  
  .hidden {
    display: none;
+ }
+
+ .result-section {
+   display: flex;
+   flex-direction: column;
+   background: var(--resultCol);
+   border: solid thin var(--borderCol);
+   width: fit-content;
+   height: min-content;
+   margin: 1rem auto;
+   padding: 1.5rem 2rem;
  }
