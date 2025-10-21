@@ -154,7 +154,7 @@ const resultLit1 = `Your horoscope today is ${horoscope}`;
 	result0.textContent = resultLit0;
 	resultTxt.textContent = resultLit1;
 
-	resultCard.classList.toggle("hidden");
+	resultCard.classList.remove("hidden");
 }
 
 console.log(signNum);
