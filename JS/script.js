@@ -27,7 +27,7 @@ const horoscopeData = {
 					"Communication is key today. Reach out to an old friend or a family member you haven't spoken to in a while.",
 				luckyNumbers: [2, 16, 23],
 				key: 2,
-				icon: "/img/gemini.svg"
+				icon: "img/gemini.svg"
 			},
 			{
 				sign: "Cancer",
@@ -36,7 +36,7 @@ const horoscopeData = {
 					"Embrace your creative side. Today is a perfect day for starting a new artistic project.",
 				luckyNumbers: [7, 19, 25],
 				key: 3,
-				icon: "/img/cancer.svg"
+				icon: "img/cancer.svg"
 			},
 			{
 				sign: "Leo",
@@ -45,7 +45,7 @@ const horoscopeData = {
 					"Your leadership skills will be in demand today. Take charge in a group situation and guide others to success.",
 				luckyNumbers: [1, 8, 22],
 				key: 4,
-				icon: "/img/leo.svg"
+				icon: "img/leo.svg"
 			},
 			{
 				sign: "Virgo",
@@ -54,7 +54,7 @@ const horoscopeData = {
 					"Pay attention to the small details today. Your meticulousness will lead to a significant breakthrough.",
 				luckyNumbers: [4, 11, 26],
 				key: 5,
-				icon: "/img/virgo.svg"
+				icon: "img/virgo.svg"
 			},
 			{
 				sign: "Libra",
@@ -63,7 +63,7 @@ const horoscopeData = {
 					"Seek balance in your life. Take time for yourself and focus on your personal well-being.",
 				luckyNumbers: [6, 15, 24],
 				key: 6,
-				icon: "/img/libra.svg"
+				icon: "img/libra.svg"
 			},
 			{
 				sign: "Scorpio",
@@ -72,7 +72,7 @@ const horoscopeData = {
 					"A mystery may unfold today. Trust your intuition and follow where it leads.",
 				luckyNumbers: [9, 18, 27],
 				key: 7,
-				icon: "/img/scorpio.svg"
+				icon: "img/scorpio.svg"
 			},
 			{
 				sign: "Sagittarius",
@@ -81,7 +81,7 @@ const horoscopeData = {
 					"Adventure calls to you. Embrace new experiences and open yourself to learning.",
 				luckyNumbers: [3, 12, 21],
 				key: 8,
-				icon: "/img/sagittarius.svg"
+				icon: "img/sagittarius.svg"
 			},
 			{
 				sign: "Capricorn",
@@ -90,7 +90,7 @@ const horoscopeData = {
 					"Discipline and hard work will be fruitful. Focus on your goals and you'll achieve great things.",
 				luckyNumbers: [8, 16, 23],
 				key: 9,
-				icon: "/img/capricorn.svg"
+				icon: "img/capricorn.svg"
 			},
 			{
 				sign: "Aquarius",
@@ -99,7 +99,7 @@ const horoscopeData = {
 					"Innovation is your theme today. Think outside the box and explore new ideas.",
 				luckyNumbers: [5, 13, 20],
 				key: 10,
-				icon: "/img/aquarius.svg"
+				icon: "img/aquarius.svg"
 			},
 			{
 				sign: "Pisces",
@@ -108,7 +108,7 @@ const horoscopeData = {
 					"Your empathy will be a blessing to someone in need. Listen and offer your support.",
 				luckyNumbers: [2, 10, 22],
 				key: 11,
-				icon: "/img/pisces.svg"
+				icon: "img/pisces.svg"
 			}
 		]
 	}
