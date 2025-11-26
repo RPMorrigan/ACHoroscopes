@@ -54,7 +54,7 @@ const horoscopeData = {
 					"Pay attention to the small details today. Your meticulousness will lead to a significant breakthrough.",
 				luckyNumbers: [4, 11, 26],
 				key: 5,
-				icon: "https://openmoji.org/data/color/svg/2653.svg"
+				icon: "https://openmoji.org/data/color/svg/264D.svg"
 			},
 			{
 				sign: "Libra",
